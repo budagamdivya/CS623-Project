@@ -40,6 +40,7 @@ Note: Update the path in ipynb file specific to create_tables.sql file exactly.
 
 ## Expected results as per Sample Data
 
+'''
 Requirement already satisfied: psycopg2 in c:\users\akshara\anaconda3\lib\site-packages (2.9.6)
 Connected to the database
 Tables created
@@ -198,3 +199,4 @@ DETAIL:  Key (productid)=(p1) is not present in table "product".
 Cursor closed
 Connection closed
 
+'''

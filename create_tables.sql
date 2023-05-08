@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Stock;
 DROP TABLE IF EXISTS Depot;
 DROP TABLE IF EXISTS Product;
 
-CREATE TABLE product (
+CREATE TABLE Product (
     productId VARCHAR(10) PRIMARY KEY,
     productname VARCHAR(255),
     price DECIMAL(10, 2)

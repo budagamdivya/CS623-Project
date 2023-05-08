@@ -1,14 +1,14 @@
-DROP TABLE IF EXISTS Stock;
 DROP TABLE IF EXISTS Depot;
 DROP TABLE IF EXISTS Product;
+DROP TABLE IF EXISTS Stock;
 
-CREATE TABLE product (
+CREATE TABLE Product (
     productId VARCHAR(10) PRIMARY KEY,
     productname VARCHAR(255),
     price DECIMAL(10, 2)
 );
 
-INSERT INTO Product (productId, productname, price)
+INSERT INTO product (productId, productname, price)
 VALUES ('p1', 'tape', 2.5),
        ('p2', 'tv', 250),
        ('p3', 'vcr', 80);
@@ -29,8 +29,8 @@ CREATE TABLE Stock (
     deptId VARCHAR(10),
     quantity INT,
     PRIMARY KEY (productId, deptId),
-    FOREIGN KEY (productId) REFERENCES Product(productId),
-    FOREIGN KEY (deptId) REFERENCES Depot(deptId)
+    FOREIGN KEY (productId) REFERENCES Product(productId) ON DELETE CASCADE,
+    FOREIGN KEY (deptId) REFERENCES Depot(deptId) ON DELETE CASCADE
 );
 
 INSERT INTO Stock (productId, deptId, quantity)

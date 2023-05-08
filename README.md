@@ -73,56 +73,8 @@ p2, d1, -400
 p2, d2, 2000
 
 
-Transaction 1: Successfully deleted product p1 from Product and Stock
-
-Data in Product table:
-productid, productname, price
-p2, tv, 250.00
-p3, vcr, 80.00
-
-
-
-Data in Depot table:
-deptid, addr, volume
-d1, New York, 9000
-d2, Syracuse, 6000
-d4, New York, 2000
-
-
-
-Data in Stock table:
-productid, deptid, quantity
-p3, d1, 3000
-p3, d4, 2000
-p2, d4, 1500
-p2, d1, -400
-p2, d2, 2000
-
 
 Transaction 2: Successfully deleted depot d1 from Depot and Stock
-
-Data in Product table:
-productid, productname, price
-p2, tv, 250.00
-p3, vcr, 80.00
-
-
-
-Data in Depot table:
-deptid, addr, volume
-d2, Syracuse, 6000
-d4, New York, 2000
-
-
-
-Data in Stock table:
-productid, deptid, quantity
-p3, d4, 2000
-p2, d4, 1500
-p2, d2, 2000
-
-
-Transaction 3: Successfully changed product p1 name to pp1 in Product
 
 Data in Product table:
 productid, productname, price
@@ -168,30 +120,7 @@ p2, d4, 1500
 p2, d2, 2000
 
 
-Transaction 5: Successfully added product (p100, cd, 5) in Product and (p100, d2, 50) in Stock
-
-Data in Product table:
-productid, productname, price
-p2, tv, 250.00
-p3, vcr, 80.00
-p100, cd, 5.00
-
-
-
-Data in Depot table:
-deptid, addr, volume
-d2, Syracuse, 6000
-d4, New York, 2000
-
-
-
-Data in Stock table:
-productid, deptid, quantity
-p3, d4, 2000
-p2, d4, 1500
-p2, d2, 2000
-p100, d2, 50
-
+Transaction 6: 
 
 Error during Transaction 6: insert or update on table "stock" violates foreign key constraint "stock_productid_fkey"
 DETAIL:  Key (productid)=(p1) is not present in table "product".
